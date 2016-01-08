@@ -8,7 +8,7 @@ directory on a temporary filesystem and a new network namespace with a
 restrictive netfilter.
 
 This may be useful for a number of applications, but was created specifically
-with Chromium in mind. To open a shady site within isolated and disposable
+with Chromium in mind. To open a shady site within an isolated and disposable
 sandbox -- or simply to help further protect your online banking -- prepend
 your normal command with `disposable`:
 
