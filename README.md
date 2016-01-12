@@ -1,17 +1,17 @@
 # Disposable
 
 Disposable is a shell script used to launch a disposable application via
-[Firejail](https://github.com/netblue30/firejail).
+[Firejail][1].
 
 The application will be launched within a Firejail sandbox using a private home
 directory on a temporary filesystem.
 
 This may be useful for a number of applications, but was created specifically
-with Chromium in mind. To open a shady site within an isolated and disposable
-sandbox -- or simply to help further protect your online banking -- prepend
-your normal command with `disposable`:
+with Chromium in mind. To open a [shady site][2] within an isolated and
+disposable sandbox -- or simply to help further protect your online banking --
+prepend your normal command with `disposable`:
 
-    $ disposable chromium http://twitter.com
+    $ disposable chromium http://www.forbes.com
 
 When using Disposable to run `chromium` or `google-chrome`, the script will
 prevent the first run greeting and disable the default browser check.
@@ -25,11 +25,10 @@ restrictive netfilter by using the `-n` option.
 
     $ disposable -n
 
-Unless otherwise specified,
-[NetworkManager](https://wiki.gnome.org/Projects/NetworkManager) will be used
-to determine the first connected network interface. This interface will be used
-to create the new network namespace. A specific interface may be requested via
-the `-i` option (which implies `-n`).
+Unless otherwise specified, [NetworkManager][3] will be used to determine the
+first connected network interface. This interface will be used to create the
+new network namespace. A specific interface may be requested via the `-i`
+option (which implies `-n`).
 
     $ disposable -i eth0
 
@@ -57,3 +56,7 @@ option.
     $ disposable -d
 
 This has the effect of disabling audio input and output, as well as any webcams.
+
+[1]: https://github.com/netblue30/firejail
+[2]: http://www.engadget.com/2016/01/08/you-say-advertising-i-say-block-that-malware/
+[3]: https://wiki.gnome.org/Projects/NetworkManager
